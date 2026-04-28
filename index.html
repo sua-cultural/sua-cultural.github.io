@@ -470,13 +470,38 @@
 
         .cineclub-info {
             padding: 1.5rem;
-            background: rgba(255, 51, 51, 0.05);
+            background: white;
             border-radius: 4px;
             margin-top: 1.5rem;
             font-size: 0.95rem;
             color: var(--text);
+            border-left: 4px solid var(--secondary);
         }
 
+        .cineclub-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .cineclub-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary);
+            display: inline-block;
+        }
+
+        .cineclub-btn:hover {
+            background: transparent;
+            color: var(--secondary);
+        }
         /* ===== PRODUCCIÓN AUDIOVISUAL ===== */
         .audiovisual {
             background: white;
@@ -898,6 +923,13 @@
             .sala-image {
                 height: 250px;
             }
+            .cineclub-buttons {
+                flex-direction: column;
+            }
+            .cineclub-btn {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -914,7 +946,7 @@
                 <li><a href="#sobre-sua" class="nav-link">Sobre SUA</a></li>
                 <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
                 <li><a href="#formacion" class="nav-link">Formación</a></li>
-                <li><a href="#cineclub" class="nav-link">Cineclubs</a></li>
+                <li><a href="#cineclub" class="nav-link">Cineclubes</a></li>
                 <li><a href="#sala-solar" class="nav-link">Sala Solar</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
@@ -1111,8 +1143,11 @@
                 <p>Colectivo aliado de Sua dedicado al séptimo arte. Iniciativa para amantes del cine en San Gil. ¡Mire más allá!</p>
                 <div class="cineclub-info">
                     <strong>📍 San Gil, Santander</strong><br>
-                    <strong>📱 @chibanacineclub en Instagram</strong><br>
-                    <strong>Síguenos para conocer programación</strong>
+                    <strong>En alianza con La Casa del Libro Total</strong><br>
+                    <strong>Síguelos para la programación</strong>
+                </div>
+                <div class="cineclub-buttons">
+                    <a href="https://instagram.com/chibanacineclub" class="cineclub-btn" target="_blank">Visitar Instagram</a>
                 </div>
             </div>
         </div>
