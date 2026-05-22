@@ -1190,7 +1190,7 @@ body {
 /* Ubicación: 2 columnas */
 .section2 .section2-location-row {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   gap: 12px;
   margin-bottom: 16px;
 }
@@ -1227,7 +1227,7 @@ body {
 .section2 .sala-solar-title {
   font-size: 20px;
   font-weight: 700;
-  color: #333;
+  color: #fa3627;
   margin: 0 0 10px 0;
   line-height: 1.2;
   text-align: center;
@@ -1323,7 +1323,7 @@ body {
 .section2 .chibana-title {
   font-size: 18px;
   font-weight: 700;
-  color: #333;
+  color: #fa3627;
   margin: 0;
   line-height: 1.2;
 }
