@@ -380,7 +380,7 @@ body {
   align-items: center;
   align-content: flex-start;
   min-height: 100vh;
-  padding: 40px 16px 32px;
+  padding: 10px 16px 32px;
   position: relative;
 }
 
@@ -1171,4 +1171,310 @@ body {
   font-size: 13px;
   color: #666;
   margin: 0;
+}
+
+/* ============================================
+   SECCIÓN 2: AGENDA CULTURAL - LAYOUT FINAL
+   ============================================ */
+
+/* Header: Solo Título */
+.section2 .section2-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 12px 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Ubicación: 2 columnas */
+.section2 .section2-location-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.section2 .location-col {
+  text-align: left;
+}
+
+.section2 .location-col.right {
+  text-align: center;
+}
+
+.section2 .location-text {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.section2 .location-text.highlight {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* SALA SOLAR CONTAINER */
+.section2 .sala-solar-container {
+  margin-bottom: 16px;
+}
+
+.section2 .sala-solar-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Imagen full width */
+.section2 .venue-image-wrapper-large {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+  cursor: pointer;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.section2 .venue-image-wrapper-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.section2 .venue-image-wrapper-large:hover img {
+  transform: scale(1.05);
+}
+
+/* Features grid 2x2 */
+.section2 .features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.section2 .feature-item {
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid rgba(250, 54, 39, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 56px;
+  font-family: inherit;
+}
+
+.section2 .feature-item:hover {
+  background: #fff5f3;
+  border-color: #fa3627;
+  box-shadow: 0 2px 8px rgba(250, 54, 39, 0.15);
+}
+
+.section2 .feature-item span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.3;
+  display: block;
+}
+
+.section2 .feature-item:hover span {
+  color: #fa3627;
+}
+
+/* CHIBANÁ CONTAINER: 2 columnas */
+.section2 .chibana-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.section2 .chibana-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.section2 .chibana-location {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.section2 .chibana-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.section2 .chibana-image-small {
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.section2 .chibana-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.section2 .chibana-image-small:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   TABLET (768px+)
+   ============================================ */
+
+@media (min-width: 768px) {
+  .section2 .section2-title {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+
+  .section2 .section2-location-row {
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .section2 .location-text {
+    font-size: 14px;
+  }
+
+  .section2 .sala-solar-container {
+    margin-bottom: 20px;
+  }
+
+  .section2 .sala-solar-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .section2 .venue-image-wrapper-large {
+    aspect-ratio: 16 / 10;
+    margin-bottom: 14px;
+  }
+
+  .section2 .features-grid {
+    gap: 10px;
+  }
+
+  .section2 .feature-item {
+    min-height: 70px;
+  }
+
+  .section2 .feature-item span {
+    font-size: 12px;
+  }
+
+  .section2 .chibana-container {
+    gap: 14px;
+  }
+
+  .section2 .chibana-title {
+    font-size: 20px;
+  }
+}
+
+/* ============================================
+   DESKTOP (1024px+)
+   ============================================ */
+
+@media (min-width: 1024px) {
+  .section2 .section2-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .section2 .section2-location-row {
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .section2 .location-text {
+    font-size: 14px;
+  }
+
+  .section2 .sala-solar-container {
+    margin-bottom: 24px;
+  }
+
+  .section2 .sala-solar-title {
+    font-size: 26px;
+    margin-bottom: 14px;
+  }
+
+  .section2 .venue-image-wrapper-large {
+    aspect-ratio: 16 / 9;
+    margin-bottom: 16px;
+  }
+
+  .section2 .features-grid {
+    gap: 12px;
+  }
+
+  .section2 .feature-item {
+    min-height: 80px;
+    padding: 12px;
+  }
+
+  .section2 .feature-item span {
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .section2 .chibana-container {
+    grid-template-columns: 1fr 180px;
+    gap: 20px;
+  }
+
+  .section2 .chibana-title {
+    font-size: 24px;
+  }
+}
+
+/* ============================================
+   ACCESIBILIDAD
+   ============================================ */
+
+.section2 .feature-item:focus-visible,
+.section2 .venue-image-wrapper-large:focus-visible,
+.section2 .chibana-image-small:focus-visible {
+  outline: 2px solid #fa3627;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section2 .feature-item,
+  .section2 .venue-image-wrapper-large,
+  .section2 .chibana-image-small {
+    transition: none;
+  }
 }
