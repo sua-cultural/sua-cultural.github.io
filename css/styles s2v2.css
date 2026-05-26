@@ -380,7 +380,7 @@ body {
   align-items: center;
   align-content: flex-start;
   min-height: 100vh;
-  padding: 10px 16px 32px;
+  padding: 40px 16px 32px;
   position: relative;
 }
 
@@ -406,17 +406,17 @@ body {
 }
 
 .section2 {
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
-  color: white;
+  background: linear-gradient(135deg, #71bb1f0d 0%, #71bb1f0d 100%);
+  color: #333;
 }
 
 .section3 {
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #ffdd4b 0%, #ffdd4b 100%);
   color: white;
 }
 
 .section4 {
-  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #fa3627 0%, #fa3627 100%);
   color: white;
 }
 
@@ -472,149 +472,211 @@ body {
 }
 
 /* ============================================
-   IMÁGENES - MOBILE FIRST
+   LOGO SECCIÓN - MOBILE FIRST
    ============================================ */
 
 .section-logo {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  margin-bottom: 12px;
 }
 
 /* ============================================
-   BOTONES - MOBILE FIRST
+   BOTONES CTA - MOBILE FIRST
    ============================================ */
 
 .cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.25);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #fa3627;
   color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
+  border: none;
+  border-radius: 8px;
   font-size: 14px;
-  transition: all var(--transition);
+  font-weight: 500;
   cursor: pointer;
-  backdrop-filter: blur(4px);
+  transition: all var(--transition);
+  text-decoration: none;
+  margin: 8px;
 }
 
 .cta-button:hover {
-  background: rgba(255, 255, 255, 0.35);
-  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(250, 54, 39, 0.85);
   transform: translateY(-2px);
 }
 
-/* Botones en sección 1 (Início - Sua) */
-.section1 .cta-button {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #ffdd4b;
-  color: #fa3627;
+.cta-button:active {
+  transform: translateY(0);
 }
 
-.section1 .cta-button:hover {
-  background: rgba(255, 221, 75, 0.2);
-  border-color: #ffdd4b;
-}
-
-/* Botones en sección 2 (Agenda) */
-.section2 .cta-button {
-  background: rgba(255, 255, 255, 0.15);
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  color: white;
-}
-
-.section2 .cta-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.7);
-}
-
-/* Botones en sección 3 (Creación) */
-.section3 .cta-button {
-  background: rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  color: #333;
-}
-
-.section3 .cta-button:hover {
-  background: rgba(0, 0, 0, 0.2);
-  border-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Botones en sección 4 (Formación) */
-.section4 .cta-button {
-  background: rgba(255, 255, 255, 0.15);
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  color: white;
-}
-
-.section4 .cta-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.7);
-}
-
-/* Botones en sección 5 (Comunidad) */
-.section5 .cta-button {
-  background: rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  color: #333;
-}
-
-.section5 .cta-button:hover {
-  background: rgba(0, 0, 0, 0.2);
-  border-color: rgba(0, 0, 0, 0.5);
-}
 /* ============================================
-   GRILLAS - MOBILE FIRST
+   AGENDA CULTURAL - SECCIÓN 2 - MOBILE FIRST
+   ============================================ */
+
+.agenda-section {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.agenda-hero {
+  width: 100%;
+  padding: 24px 16px;
+  background: transparent;
+  text-align: center;
+}
+
+.agenda-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fa3627;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.agenda-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+.agenda-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.agenda-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.agenda-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.agenda-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  text-align: left;
+}
+
+.agenda-location {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.agenda-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffdd4b;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.agenda-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.agenda-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background: #fa3627;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.agenda-cta:hover {
+  background: #e62f1f;
+  transform: scale(1.05);
+}
+
+.agenda-cta:active {
+  transform: scale(0.98);
+}
+
+.agenda-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fa3627;
+  white-space: nowrap;
+}
+
+/* ============================================
+   GRILLAS Y TARJETAS - MOBILE FIRST
    ============================================ */
 
 .agenda-grid,
 .projects-grid,
 .courses-grid {
   display: grid;
-  gap: 16px;
-  width: 100%;
   grid-template-columns: 1fr;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 24px;
+  width: 100%;
 }
 
-/* Tarjetas */
 .agenda-card,
 .project-card,
 .course-card,
 .contact-card {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 24px;
   transition: all var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .agenda-card:hover,
 .project-card:hover,
 .course-card:hover,
 .contact-card:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-4px);
 }
 
+.agenda-card img,
 .project-card img,
 .course-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .agenda-card h3,
@@ -806,7 +868,28 @@ body {
     height: 100px;
   }
 
-  .agenda-grid,
+  /* Agenda responsivo tablet */
+  .agenda-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .agenda-item {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-image {
+    height: 280px;
+  }
+
+  .agenda-name {
+    font-size: 28px;
+  }
+
+  .agenda-title {
+    font-size: 52px;
+  }
+
   .projects-grid,
   .courses-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -853,9 +936,60 @@ body {
     height: 120px;
   }
 
+  /* Agenda responsivo desktop */
+  .agenda-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .agenda-hero {
+    padding: 40px;
+    text-align: left;
+  }
+
+  .agenda-title {
+    font-size: 64px;
+  }
+
   .agenda-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    max-width: 1000px;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .sala-solar-item {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 32px;
+  }
+
+  .sala-solar-item .agenda-image {
+    height: 280px;
+    order: 2;
+  }
+
+  .sala-solar-item .agenda-text {
+    order: 1;
+    justify-content: center;
+  }
+
+  .chibana-item {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 32px;
+  }
+
+  .chibana-item .agenda-image {
+    height: 280px;
+    order: 2;
+  }
+
+  .chibana-item .agenda-text {
+    order: 1;
+    justify-content: center;
+  }
+
+  .agenda-name {
+    font-size: 36px;
   }
 
   .projects-grid {
@@ -868,6 +1002,7 @@ body {
     max-width: 1100px;
   }
 }
+
 /* ============================================
    MODAL
    ============================================ */
@@ -886,109 +1021,33 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
   padding: 20px;
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
 }
 
 .modal.open {
   display: flex;
   opacity: 1;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  animation: fadeInBackdrop 0.3s ease;
-}
-
-/* 🆕 Animación de fade backdrop */
-@keyframes fadeInBackdrop {
-  from {
-    opacity: 0;
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-  }
-  to {
-    opacity: 1;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-  }
 }
 
 .modal-content {
   background: white;
   border-radius: 16px;
-  max-width: 500px;  /* Mobile: 500px */
+  max-width: 500px;
   width: 100%;
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  animation: slideUp 0.3s ease;
 }
 
-/* 🆕 En escritorio: 50% más ancho */
-@media (min-width: 768px) {
-  .modal-content {
-    max-width: 750px;  /* Desktop: 750px (50% más) */
-  }
-}
-
-/* 🆕 Animación mejorada slideUp con bounce */
 @keyframes slideUp {
   from {
-    transform: translateY(40px);
+    transform: translateY(30px);
     opacity: 0;
   }
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-/* 🆕 Animación de cierre (slide down) */
-@keyframes slideDown {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-}
-
-/* 🆕 Animación de swipe back (slide right + fade) */
-@keyframes slideRight {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-}
-
-/* 🆕 Animación de rotate out (para variedad) */
-@keyframes rotateOut {
-  from {
-    transform: rotateY(0deg) scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: rotateY(-15deg) scale(0.95);
-    opacity: 0;
-  }
-}
-
-/* 🆕 Animación de zoom out */
-@keyframes zoomOut {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(0.85);
-    opacity: 0;
   }
 }
 
@@ -996,7 +1055,7 @@ body {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: rgba(0, 0, 0, 0.05);
+  background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
@@ -1006,19 +1065,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
   z-index: 10;
-  border-radius: 50%;
 }
 
 .modal-close:hover {
   color: #333;
-  background: rgba(0, 0, 0, 0.1);
-  transform: rotate(90deg) scale(1.1);
-}
-
-.modal-close:active {
-  transform: rotate(90deg) scale(0.95);
 }
 
 .modal-inner {
@@ -1090,7 +1142,6 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  /*transform: translateY(-50%);*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1118,6 +1169,7 @@ body {
 .section5 .arrow-hint {
   display: none;
 }
+
 .arrow-hint:hover {
   transform: scale(1.15);
   color: #fa3627;
@@ -1126,6 +1178,7 @@ body {
 .arrow-hint:active {
   transform: scale(0.95);
 }
+
 .modal-video {
   position: relative;
   width: 100%;
@@ -1171,278 +1224,4 @@ body {
   font-size: 13px;
   color: #666;
   margin: 0;
-}
-
-
-/* ============================================
-   SECTION 2: AGENDA CULTURAL - 2 COLUMNAS
-   Mobile First: 2 columnas desde 375px
-   ============================================ */
-
-.section2-content {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 20px 16px;
-}
-
-.section2-header {
-  width: 100%;
-  grid-column: 1 / -1;
-}
-
-.section2-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #fa3627;
-  margin: 0;
-  text-align: left;
-}
-
-/* ============================================
-   SALA SOLAR SECTION - 2 columnas
-   ============================================ */
-
-.section2-sala-solar {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: start;
-  width: 100%;
-}
-
-/* Imagen Sala Solar */
-.section2-image-sala-solar {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  grid-column: 1;
-}
-
-.sala-solar-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-}
-
-/* Info Sala Solar (derecha) */
-.section2-sala-solar .section2-info-block {
-  grid-column: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: left;
-}
-
-.section2-location {
-  font-size: 13px;
-  color: #666;
-  margin: 0;
-  font-weight: 400;
-  line-height: 1.4;
-}
-
-.location-icon {
-  margin-right: 4px;
-  font-size: 14px;
-}
-
-.section2-venue-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffc100;
-  margin: 4px 0 8px 0;
-}
-
-/* Botones */
-.section2-buttons {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.section2-btn-primary {
-  background-color: #fa3627;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-}
-
-.section2-btn-primary:hover {
-  background-color: #e02415;
-}
-
-.section2-link {
-  color: #fa3627;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  transition: opacity 0.3s ease;
-  white-space: nowrap;
-}
-
-.section2-link:hover {
-  opacity: 0.8;
-}
-
-/* ============================================
-   CHIBANÁ SECTION - 2 columnas
-   ============================================ */
-
-.section2-chibana {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: start;
-  width: 100%;
-}
-
-/* Info Chibaná (izquierda) */
-.section2-chibana .section2-info-block {
-  grid-column: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: left;
-}
-
-/* Imagen Chibaná (derecha) */
-.section2-image-large {
-  grid-column: 2;
-  width: 50%;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.chibana-img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.chibana-img:hover {
-  transform: scale(1.02);
-}
-
-/* ============================================
-   TABLET (768px+)
-   ============================================ */
-
-@media (min-width: 768px) {
-
-  .section2-content {
-    gap: 32px;
-    padding: 28px 24px;
-  }
-
-  .section2-title {
-    font-size: 40px;
-  }
-
-  .section2-sala-solar {
-    gap: 20px;
-  }
-
-  .section2-location {
-    font-size: 14px;
-  }
-
-  .section2-venue-title {
-    font-size: 24px;
-    margin: 6px 0 10px 0;
-  }
-
-  .section2-buttons {
-    gap: 12px;
-  }
-
-  .section2-btn-primary {
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-
-  .section2-chibana {
-    gap: 20px;
-  }
-
-}
-
-/* ============================================
-   DESKTOP (1024px+)
-   ============================================ */
-
-@media (min-width: 1024px) {
-
-  .section2-content {
-    gap: 40px;
-    padding: 32px 40px;
-  }
-
-  .section2-title {
-    font-size: 48px;
-    margin-bottom: 8px;
-  }
-
-  .section2-sala-solar {
-    gap: 32px;
-  }
-
-  .section2-location {
-    font-size: 15px;
-  }
-
-  .section2-venue-title {
-    font-size: 28px;
-  }
-
-  .section2-buttons {
-    gap: 16px;
-  }
-
-  .section2-btn-primary {
-    padding: 14px 28px;
-    font-size: 15px;
-  }
-
-  .section2-chibana {
-    gap: 32px;
-  }
-
-}
-
-/* ============================================
-   ACCESIBILIDAD & INTERACCIÓN
-   ============================================ */
-
-.section2-btn-primary:focus,
-.section2-link:focus,
-.chibana-img:focus {
-  outline: 2px solid #fa3627;
-  outline-offset: 2px;
-}
-
-.section2-btn-primary:active {
-  transform: scale(0.98);
-}
-
-.sala-solar-img,
-.chibana-img {
-  transition: transform 0.3s ease;
-}
-
-.sala-solar-img:hover {
-  transform: scale(1.01);
 }

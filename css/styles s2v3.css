@@ -1,0 +1,816 @@
+/* ============================================
+   MOBILE FIRST - RESET Y VARIABLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #667eea;
+  --color-secondary: #f5576c;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --transition: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--color-text);
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+
+.timeline-header {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 12px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  height: auto;
+}
+
+.timeline-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 0;
+  height: auto;
+}
+
+.timeline-line {
+  display: none;
+}
+
+.timeline-points {
+  display: flex;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+  flex-direction: row;
+}
+
+.timeline-point {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--transition);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.timeline-point:hover {
+  border-color: #fa3627;
+  transform: scale(1.15);
+}
+
+.timeline-point.active {
+  background: #fa3627;
+  border-color: #fa3627;
+  width: 14px;
+  height: 14px;
+  box-shadow: 0 0 0 4px rgba(250, 54, 39, 0.15);
+}
+
+.section-label {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(51, 51, 51, 0.85);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.timeline-point:hover .section-label {
+  opacity: 1;
+}
+
+.timeline-point.active .section-label {
+  opacity: 1;
+  background: rgba(250, 54, 39, 0.6);
+  color: white;
+  font-weight: 700;
+}
+
+/* ============================================
+   SOL BOTÓN
+   ============================================ */
+
+.sun-button {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 300;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition);
+}
+
+.sun-button::before {
+  content: '';
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 2px solid rgba(250, 54, 39, 0.3);
+  border-radius: 50%;
+  animation: expandRing 2s ease-out infinite;
+}
+
+.sun-button:hover {
+  transform: scale(1.1);
+}
+
+.sun-button:active {
+  transform: scale(0.95);
+}
+
+@keyframes expandRing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.sun-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* ============================================
+   BOTÓN HOME
+   ============================================ */
+
+.home-button {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  z-index: 250;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #909090;
+  transition: all 0.3s ease;
+}
+
+.home-button.visible {
+  display: flex;
+}
+
+.home-button svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.home-button:hover {
+  transform: scale(1.15);
+  color: #fa3627;
+}
+
+/* ============================================
+   SUBMENÚ
+   ============================================ */
+
+.submenu {
+  position: fixed;
+  top: 70px;
+  right: 12px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  min-width: 180px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: scale(0.95) translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition);
+  z-index: 250;
+  overflow: hidden;
+}
+
+.submenu.open {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.submenu-item {
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--color-text);
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.submenu-item:last-child {
+  border-bottom: none;
+}
+
+.submenu-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+  padding-left: 24px;
+}
+
+.submenu-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 8px 0;
+}
+
+.submenu-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.15);
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ============================================
+   OVERLAY
+   ============================================ */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition);
+  z-index: 100;
+}
+
+.menu-overlay.open {
+  opacity: 0.2;
+  pointer-events: auto;
+}
+
+/* ============================================
+   SCROLL CONTAINER
+   ============================================ */
+
+.scroll-container {
+  width: 100%;
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  display: flex;
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================
+   SECCIONES
+   ============================================ */
+
+.scroll-section {
+  flex: 0 0 100%;
+  min-width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  min-height: 100vh;
+  padding: 40px 16px 32px;
+  position: relative;
+}
+
+.section-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.section1 {
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  color: rgb(0, 0, 0);
+}
+
+.section2 {
+  background: linear-gradient(135deg, #f5f5f5 0%, #f5f5f5 100%);
+  color: #333;
+}
+
+.section3 {
+  background: linear-gradient(135deg, #ffdd4b 0%, #ffdd4b 100%);
+  color: white;
+}
+
+.section4 {
+  background: linear-gradient(135deg, #fa3627 0%, #fa3627 100%);
+  color: white;
+}
+
+.section5 {
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  color: white;
+}
+
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+
+.scroll-section h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.scroll-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.scroll-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.tagline {
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.95;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 14px;
+  max-width: 600px;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.section-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   BOTONES CTA - GENERAL
+   ============================================ */
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #fa3627;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+  margin: 8px;
+}
+
+.cta-button:hover {
+  background: rgba(250, 54, 39, 0.85);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   AGENDA CULTURAL - SECCIÓN 2 - MOBILE FIRST
+   ============================================ */
+
+.agenda-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.agenda-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fa3627;
+  text-align: left;
+  width: 100%;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+}
+
+.agenda-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.agenda-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.agenda-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.agenda-location {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  margin: 0;
+}
+
+.agenda-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffdd4b;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.agenda-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.agenda-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  background: #fa3627;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.agenda-button:hover {
+  background: #e62f1f;
+  transform: scale(1.05);
+}
+
+.agenda-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fa3627;
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.modal.open {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.modal-inner {
+  padding: 40px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.modal-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.modal-inner h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.modal-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  text-align: justify;
+  margin: 0;
+}
+
+.modal-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 20px 0;
+  background: #000;
+}
+
+.modal-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* ============================================
+   FLECHA ANIMADA
+   ============================================ */
+
+.arrow-hint {
+  position: fixed;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #ffdd4b;
+  animation: arrowBlink 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowBlink {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.section1 .arrow-hint {
+  display: flex;
+}
+
+.section2 .arrow-hint,
+.section3 .arrow-hint,
+.section4 .arrow-hint,
+.section5 .arrow-hint {
+  display: none;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET (768px+)
+   ============================================ */
+
+@media (min-width: 768px) {
+  .scroll-section {
+    padding: 60px 40px;
+  }
+
+  .agenda-title {
+    font-size: 48px;
+  }
+
+  .agenda-item {
+    gap: 24px;
+  }
+
+  .agenda-image {
+    height: 240px;
+  }
+
+  .agenda-name {
+    font-size: 36px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - DESKTOP (1024px+)
+   ============================================ */
+
+@media (min-width: 1024px) {
+  .scroll-section {
+    padding: 60px 40px;
+  }
+
+  .agenda-title {
+    font-size: 56px;
+    margin-bottom: 48px;
+  }
+
+  .agenda-section {
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Sala Solar: Imagen izquierda, Texto derecha */
+  .sala-solar {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .sala-solar .agenda-image {
+    flex: 0 0 45%;
+    height: 300px;
+  }
+
+  .sala-solar .agenda-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  /* Chibaná: Texto izquierda, Imagen derecha */
+  .chibana {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .chibana .agenda-image {
+    flex: 0 0 40%;
+    height: 280px;
+  }
+
+  .chibana .agenda-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .agenda-name {
+    font-size: 40px;
+  }
+
+  .agenda-image {
+    border-radius: 16px;
+  }
+}

@@ -168,68 +168,73 @@
 
 <!-- Sección 2: Agenda Cultural -->
     <section class="scroll-section section2" id="agenda">
-  <div class="section-content section2-content">
-    
-    <!-- HEADER: Título -->
-    <div class="section2-header">
-      <h2 class="section2-title">Agenda Cultural</h2>
-    </div>
-
-    <!-- SALA SOLAR SECTION -->
-    <div class="section2-sala-solar">
-      
-      <!-- Imagen Sala Solar (1 archivo con 4 cuadrantes) -->
-      <div class="section2-image-sala-solar">
-        <img src="assets/images/salasolar.jpg" alt="Sala Solar - Eventos comunitarios" class="sala-solar-img">
-      </div>
-
-      <!-- Info Sala Solar (lado derecho en tablet/desktop) -->
-      <div class="section2-info-block">
-        <p class="section2-location">
-          <span class="location-icon">📍</span>
-          El Socorro,<br>Santander
-        </p>
+      <div class="section-content">
         
-        <h3 class="section2-venue-title">Sala Solar</h3>
-        
-        <div class="section2-buttons">
-          <button class="section2-btn-primary" data-modal-external="modals/sala-solar.html">
-            Eventos
-          </button>
-          <a href="#" class="section2-link">Sua Cineclub</a>
+        <!-- HEADER: Solo Título -->
+        <h2 class="section2-title">Agenda Cultural</h2>
+
+        <!-- UBICACIÓN: 2 columnas -->
+        <div class="section2-location-row">
+          <div class="location-col">
+            <p class="location-text">El Socorro,<br>Santander</p>
+          </div>
+          <div class="location-col right">
+            <p class="location-text highlight"><br>SEDE PRINCIPAL</p>
+          </div>
         </div>
-      </div>
 
-    </div>
+        <!-- SALA SOLAR SECTION -->
+        <div class="sala-solar-container">
+          <!-- Título Sala Solar (centrado) -->
+          <h3 class="sala-solar-title">Sala Solar</h3>
+          
+          <!-- Imagen full width -->
+          <div class="venue-image-wrapper-large">
+            <img 
+              src="assets/images/placeholder-sala-solar.jpg" 
+              alt="Sala Solar" 
+              data-modal-external="modals/sala-solar.html"
+              role="button"
+              tabindex="0"
+            >
+          </div>
+          
+          <!-- Features grid 2x2 -->
+          <div class="features-grid">
+            <button class="feature-item" data-modal-external="modals/sua-cineclub.html">
+              <span>SUA CINECLUB</span>
+            </button>
+            <button class="feature-item" data-modal-external="modals/laboratorios-creativos.html">
+              <span>Laboratorios<br>Creativos</span>
+            </button>
+            <button class="feature-item" data-modal-external="modals/cafe-coworking.html">
+              <span>CAFE<br>COWORKING</span>
+            </button>
+            <button class="feature-item" data-modal-close-go="3">
+              <span>Talleres<br>Formativos</span>
+            </button>
+          </div>
+        </div>
 
-    <!-- CHIBANÁ SECTION -->
-    <div class="section2-chibana">
-      
-      <!-- Info Chibaná (lado izquierdo en tablet/desktop) -->
-      <div class="section2-info-block">
-        <p class="section2-location">
-          <span class="location-icon">📍</span>
-          San Gil,<br>Santander
-        </p>
-        
-        <h3 class="section2-venue-title">Chibaná Cineclub</h3>
-      </div>
+        <!-- CHIBANÁ SECTION: 2 columnas -->
+        <div class="chibana-container">
+          <div class="chibana-info">
+            <p class="chibana-location">San Gil,<br>Santander</p>
+          </div>
+          
+          <div class="chibana-image-small">
+            <h3 class="chibana-title">Chibaná Cineclub</h3>
+            <img 
+              src="assets/images/placeholder-chibana.jpg" 
+              alt="Chibaná Cineclub" 
+              data-modal-external="modals/chibana.html"
+              role="button"
+              tabindex="0"
+            >
+          </div>
+        </div>
 
-      <!-- Imagen Chibaná (lado derecho en tablet/desktop) -->
-      <div class="section2-image-large">
-        <img 
-          src="assets/images/placeholder-chibana.jpg" 
-          alt="Chibaná Cineclub" 
-          data-modal-external="modals/chibana.html"
-          role="button"
-          tabindex="0"
-          class="chibana-img"
-        >
-      </div>
-
-    </div>
-
-  </div>
+      </div><!-- FIN: section-content -->
     </section>
 
     <!-- Sección 3: Creación (Proyectos) -->

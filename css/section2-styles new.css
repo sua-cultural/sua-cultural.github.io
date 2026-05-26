@@ -1,0 +1,287 @@
+/* ============================================
+   SECTION 2: AGENDA CULTURAL - RESPONSIVE
+   Mobile First Approach
+   ============================================ */
+
+/* BASE: Mobile First (375px) */
+
+.section2-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px 16px;
+}
+
+.section2-header {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.section2-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fa3627;
+  margin: 0;
+  text-align: left;
+}
+
+/* SALA SOLAR SECTION */
+
+.section2-sala-solar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Imagen Sala Solar (1 archivo con 4 cuadrantes) */
+.section2-image-sala-solar {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.sala-solar-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Info block (Ubicación, título, botones) */
+.section2-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.section2-location {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.location-icon {
+  margin-right: 4px;
+}
+
+.section2-venue-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffc100;
+  margin: 0;
+  text-align: center;
+}
+
+/* Botones */
+.section2-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section2-btn-primary {
+  background-color: #fa3627;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.section2-btn-primary:hover {
+  background-color: #e02415;
+}
+
+.section2-link {
+  color: #fa3627;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.section2-link:hover {
+  opacity: 0.8;
+}
+
+/* CHIBANÁ SECTION */
+
+.section2-chibana {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.section2-image-large {
+  width: 100%;
+  overflow: hidden;
+}
+
+.chibana-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.chibana-img:hover {
+  transform: scale(1.02);
+}
+
+/* ============================================
+   TABLET (768px - 1023px)
+   ============================================ */
+
+@media (min-width: 768px) {
+  
+  .section2-content {
+    gap: 40px;
+    padding: 32px 24px;
+  }
+
+  .section2-title {
+    font-size: 40px;
+  }
+
+  /* Sala Solar: Grid + Info lado a lado */
+  .section2-sala-solar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .section2-images-grid {
+    grid-column: 1;
+    max-width: 100%;
+  }
+
+  .section2-info-block {
+    grid-column: 2;
+    text-align: left;
+    gap: 16px;
+  }
+
+  .section2-location {
+    font-size: 15px;
+  }
+
+  .section2-venue-title {
+    font-size: 32px;
+  }
+
+  .section2-buttons {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .section2-btn-primary {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+
+  /* Chibaná: Info + Imagen lado a lado */
+  .section2-chibana {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .section2-image-large {
+    grid-column: 2;
+  }
+
+  .section2-image-large img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* ============================================
+   DESKTOP (1024px y mayor)
+   ============================================ */
+
+@media (min-width: 1024px) {
+
+  .section2-content {
+    gap: 48px;
+    padding: 40px 32px;
+  }
+
+  .section2-title {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  .section2-sala-solar {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 40px;
+  }
+
+  .section2-images-grid {
+    max-width: 100%;
+  }
+
+  .section2-location {
+    font-size: 16px;
+  }
+
+  .section2-venue-title {
+    font-size: 36px;
+  }
+
+  .section2-buttons {
+    gap: 20px;
+  }
+
+  .section2-btn-primary {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+
+  .section2-link {
+    font-size: 16px;
+  }
+
+  .section2-chibana {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .chibana-img {
+    max-width: 100%;
+  }
+
+}
+
+/* ============================================
+   ACCESIBILIDAD & INTERACCIÓN
+   ============================================ */
+
+.section2-btn-primary:focus,
+.section2-link:focus,
+.chibana-img:focus {
+  outline: 2px solid #fa3627;
+  outline-offset: 2px;
+}
+
+.section2-btn-primary:active {
+  transform: scale(0.98);
+}

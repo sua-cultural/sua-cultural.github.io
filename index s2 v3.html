@@ -166,70 +166,38 @@
       </div>
     </section>
 
-<!-- Sección 2: Agenda Cultural -->
+    <!-- Sección 2: Agenda Cultural -->
     <section class="scroll-section section2" id="agenda">
-  <div class="section-content section2-content">
-    
-    <!-- HEADER: Título -->
-    <div class="section2-header">
-      <h2 class="section2-title">Agenda Cultural</h2>
-    </div>
+      <div class="section-content">
+        <div class="section-inner agenda-section">
+          
+          <!-- Título -->
+          <h2 class="agenda-title">Agenda Cultural</h2>
 
-    <!-- SALA SOLAR SECTION -->
-    <div class="section2-sala-solar">
-      
-      <!-- Imagen Sala Solar (1 archivo con 4 cuadrantes) -->
-      <div class="section2-image-sala-solar">
-        <img src="assets/images/salasolar.jpg" alt="Sala Solar - Eventos comunitarios" class="sala-solar-img">
-      </div>
+          <!-- Sala Solar: Imagen + Texto -->
+          <div class="agenda-item sala-solar">
+            <img src="assets/images/salasolar.jpg" alt="Sala Solar - El Socorro, Santander" class="agenda-image">
+            <div class="agenda-text">
+              <p class="agenda-location">📍 El Socorro, Santander</p>
+              <h3 class="agenda-name">Sala Solar</h3>
+              <div class="agenda-actions">
+                <button class="agenda-button" data-modal-external="modals/sala-solar.html">Eventos</button>
+                <span class="agenda-link">Sua Cineclub</span>
+              </div>
+            </div>
+          </div>
 
-      <!-- Info Sala Solar (lado derecho en tablet/desktop) -->
-      <div class="section2-info-block">
-        <p class="section2-location">
-          <span class="location-icon">📍</span>
-          El Socorro,<br>Santander
-        </p>
-        
-        <h3 class="section2-venue-title">Sala Solar</h3>
-        
-        <div class="section2-buttons">
-          <button class="section2-btn-primary" data-modal-external="modals/sala-solar.html">
-            Eventos
-          </button>
-          <a href="#" class="section2-link">Sua Cineclub</a>
+          <!-- Chibaná Cineclub: Texto + Imagen -->
+          <div class="agenda-item chibana">
+            <div class="agenda-text">
+              <p class="agenda-location">📍 San Gil, Santander</p>
+              <h3 class="agenda-name">Chibaná Cineclub</h3>
+            </div>
+            <img src="assets/images/chibana.jpg" alt="Chibaná Cineclub - San Gil, Santander" class="agenda-image">
+          </div>
+
         </div>
       </div>
-
-    </div>
-
-    <!-- CHIBANÁ SECTION -->
-    <div class="section2-chibana">
-      
-      <!-- Info Chibaná (lado izquierdo en tablet/desktop) -->
-      <div class="section2-info-block">
-        <p class="section2-location">
-          <span class="location-icon">📍</span>
-          San Gil,<br>Santander
-        </p>
-        
-        <h3 class="section2-venue-title">Chibaná Cineclub</h3>
-      </div>
-
-      <!-- Imagen Chibaná (lado derecho en tablet/desktop) -->
-      <div class="section2-image-large">
-        <img 
-          src="assets/images/placeholder-chibana.jpg" 
-          alt="Chibaná Cineclub" 
-          data-modal-external="modals/chibana.html"
-          role="button"
-          tabindex="0"
-          class="chibana-img"
-        >
-      </div>
-
-    </div>
-
-  </div>
     </section>
 
     <!-- Sección 3: Creación (Proyectos) -->
@@ -237,140 +205,24 @@
       <!--<div class="section-content">
         <div class="section-inner">
           <h2>Creación</h2>
-          <p class="section-subtitle">Nuestros Proyectos Artísticos</p>
-
-          <div class="projects-grid">
-            <div class="project-card">
-              <img src="assets/images/siembra-poetica.jpg" alt="Siembra Poética">
-              <h3>Siembra Poética</h3>
-              <p>Laboratorio de creación artística que investiga la poesía como herramienta de transformación.</p>
-              <a href="https://suacultural.github.io/siembra-poetica.html" class="link">Ver más →</a>
-            </div>
-
-            <div class="project-card">
-              <img src="assets/images/cine-conciencia.jpg" alt="Cine Conciencia">
-              <h3>Cine Conciencia</h3>
-              <p>Proyecto de producción audiovisual. Facilitamos cortometrajes donde la comunidad cuenta historias.</p>
-              <a href="https://suacultural.github.io/cine-conciencia.html" class="link">Ver más →</a>
-            </div>
-
-            <div class="project-card">
-              <img src="assets/images/comun-experimento.jpg" alt="Común Experimento">
-              <h3>Común Experimento</h3>
-              <p>Espacio de experimentación corporal y danza. Laboratorio abierto para crear desde el cuerpo.</p>
-              <a href="https://suacultural.github.io/comun-experimento.html" class="link">Ver más →</a>
-            </div>
-
-            <div class="project-card">
-              <img src="assets/images/resiste-como-mujer.jpg" alt="Resiste como Mujer">
-              <h3>Resiste como Mujer</h3>
-              <p>Laboratorio femenino dedicado a fortalecer voces de mujeres a través del arte.</p>
-              <a href="https://suacultural.github.io/resiste-como-mujer.html" class="link">Ver más →</a>
-            </div>
-
-            <div class="project-card">
-              <img src="assets/images/el-poder-del-campo.jpg" alt="El Poder del Campo">
-              <h3>El Poder del Campo</h3>
-              <p>Proyecto dedicado a visibilizar y celebrar la sabiduría y resistencia del trabajo rural.</p>
-              <a href="https://suacultural.github.io/el-poder-del-campo.html" class="link">Ver más →</a>
-            </div>
-
-            <div class="project-card">
-              <img src="assets/images/Reflejo-web.jpg" alt="Producción Audiovisual">
-              <h3>Producción Audiovisual</h3>
-              <p>Colección de cortometrajes que exploran historias de transformación, conflicto y resiliencia.</p>
-              <a href="https://suacultural.github.io/produccion-audiovisual.html" class="link">Ver más →</a>
-            </div>
-          </div>
         </div>
       </div>-->
     </section>
 
     <!-- Sección 4: Formación -->
     <section class="scroll-section section4" id="formacion">
-    <!--  <div class="section-content">
+      <!--<div class="section-content">
         <div class="section-inner">
           <h2>Formación Artística</h2>
-          <p class="section-subtitle">Laboratorios y Encuentros de Aprendizaje</p>
-
-          <div class="courses-grid">
-            <div class="course-card">
-              <img src="assets/images/siembra-poetica.jpg" alt="Siembra Poética 1">
-              <h3>Siembra Poética 1</h3>
-              <p>Primer ciclo de laboratorios de creación poética donde la comunidad investiga y experimenta.</p>
-              <a href="https://suacultural.github.io/siembra-poetica.html" class="link">Explorar →</a>
-            </div>
-
-            <div class="course-card">
-              <img src="assets/images/siembra-poetica-2.jpg" alt="Siembra Poética 2">
-              <h3>Siembra Poética 2</h3>
-              <p>Segundo ciclo dedicado a la "Paz con la Naturaleza". Exploración entre escritura y naturaleza.</p>
-              <a href="https://suacultural.github.io/siembra-poetica-2.html" class="link">Explorar →</a>
-            </div>
-
-            <div class="course-card">
-              <img src="assets/images/el-poder-del-campo.jpg" alt="El Poder del Campo">
-              <h3>El Poder del Campo</h3>
-              <p>Laboratorios de documental, fotografía y video 360° en territorios rurales.</p>
-              <a href="https://suacultural.github.io/el-poder-del-campo.html" class="link">Explorar →</a>
-            </div>
-
-            <div class="course-card">
-              <img src="assets/images/cine-conciencia.jpg" alt="Cine Conciencia">
-              <h3>Cine Conciencia</h3>
-              <p>Taller audiovisual donde aprendemos a contar historias que generan conciencia colectiva.</p>
-              <a href="https://suacultural.github.io/cine-conciencia.html" class="link">Explorar →</a>
-            </div>
-
-            <div class="course-card">
-              <img src="assets/images/microtaller.jpg" alt="Microtaller">
-              <h3>Microtaller</h3>
-              <p>Encuentros intensivos de exploración artística. Espacios breves pero profundos para experimentar.</p>
-              <a href="https://www.youtube.com/@suacultural" class="link">Ver en YouTube →</a>
-            </div>
-          </div>
         </div>
       </div>-->
     </section>
 
     <!-- Sección 5: Comunidad (Contacto) -->
     <section class="scroll-section section5" id="comunidad">
-      <!-- <div class="section-content">
+      <!--<div class="section-content">
         <div class="section-inner">
           <h2>Comunidad</h2>
-          <p class="section-subtitle">Contacta con Nosotros</p>
-
-          <div class="contact-grid">
-            <div class="contact-card">
-              <h3>📧 Email</h3>
-              <p><a href="mailto:suaclubartes@gmail.com">suaclubartes@gmail.com</a></p>
-            </div>
-
-            <div class="contact-card">
-              <h3>📱 WhatsApp</h3>
-              <p><a href="https://wa.me/573008643242" target="_blank">+57 300 8643242</a></p>
-            </div>
-
-            <div class="contact-card">
-              <h3>📍 Ubicación</h3>
-              <p>El Socorro & San Gil<br>Santander, Colombia</p>
-            </div>
-          </div>
-
-          <div class="social-section">
-            <h3>Síguenos en Redes</h3>
-            <div class="social-links">
-              <a href="https://facebook.com/suaclubartes" target="_blank" class="social-link">Facebook</a>
-              <a href="https://instagram.com/suaclubartes" target="_blank" class="social-link">Instagram</a>
-              <a href="https://youtube.com/@suacultural" target="_blank" class="social-link">YouTube</a>
-            </div>
-          </div>
-
-          <div class="cta-section">
-            <h3>¿Quieres Colaborar?</h3>
-            <p>Nos encantaría escucharte y explorar formas de trabajar juntos.</p>
-            <a href="https://wa.me/573008643242" class="cta-button">Envía un Mensaje</a>
-          </div>
         </div>
       </div>-->
     </section>
